@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3917409405
+    locked: 0
+  - name: bugs
+    uniqueID: 1673974427
+    locked: 0
+  - name: flyswatter
+    uniqueID: 566478317
+    locked: 0
