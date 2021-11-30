@@ -8,9 +8,13 @@ public class Bug : MonoBehaviour {
     [HideInInspector]
     public Spawner spawner;
     public bool isVisible;
+    private Animator animator;
+    private Rigidbody2D rigidbody;
 
     private void Awake() {
         pathFollower = GetComponent<PathFollower>();
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
         randomPath = Instantiate(randomPath);
         pathFollower.pathCreator = randomPath.GetComponent<RandomPath>().instantiatedPath;
     }
@@ -42,9 +46,9 @@ public class Bug : MonoBehaviour {
     public void Die() {
         spawner.bugCount--;
         GameManager.addScore();
-        GetComponent<Animator>().SetBool("dead",true);
-        Destroy(GetComponent<Rigidbody2D>());
-        // Destroy(gameObject);
+        animator.SetBool("dead",true);
+        
+        Destroy(rigidbody);
         Destroy(randomPath);
     }
 
