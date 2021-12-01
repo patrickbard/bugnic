@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {    
     public static LevelLoader instance;
+    public static bool isTransitioning;
 
     private void Awake() {
         if (instance == null || instance == this) {
@@ -15,6 +17,10 @@ public class LevelLoader : MonoBehaviour
         }
 
         DontDestroyOnLoad(this);
+    }
+
+    public static void SetIsTransitioning(bool trasitioning) {
+        isTransitioning = trasitioning;
     }
     
     public static void RestartGame() {

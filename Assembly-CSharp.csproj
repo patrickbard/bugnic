@@ -94,6 +94,9 @@
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\LevelLoader.cs" />
      <Compile Include="Assets\GameOverSelection.cs" />
+     <Compile Include="Assets\FadeTrasitionController.cs" />
+     <Compile Include="Assets\TransitionEndsBehaviour.cs" />
+     <Compile Include="Assets\TransitionStartsBehaviour.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

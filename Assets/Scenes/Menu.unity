@@ -379,6 +379,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
+  - name: starts with this
+    clip: {fileID: 8300000, guid: 20042a50cf64715499f010b4ab33d794, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
+    source: {fileID: 0}
   flySwatterSounds:
   - name: 1
     clip: {fileID: 8300000, guid: 6c8f2149e45114f4abd5e63b0c2661ba, type: 3}
@@ -2944,7 +2953,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894794199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a3750377b46f54f833a5bdc284c037, type: 3}
+  m_Script: {fileID: 11500000, guid: fe867a8ecd8eace4a8f97a5c45c91a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1894794201

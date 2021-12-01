@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (missedBugs > 30) {
+            if (missedBugs > 50) {
                 EndGame();
             }
         }

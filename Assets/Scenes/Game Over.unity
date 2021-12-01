@@ -487,7 +487,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 195310685}
-  - component: {fileID: 195310686}
   m_Layer: 0
   m_Name: Level Loader
   m_TagString: Untagged
@@ -510,18 +509,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &195310686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195310683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe867a8ecd8eace4a8f97a5c45c91a69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &215226231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1580,7 +1567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f758082ce6bc5049bba7d55adb9ae2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9dd04211443be6945bb67239cd466a27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1838,7 +1825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f758082ce6bc5049bba7d55adb9ae2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9dd04211443be6945bb67239cd466a27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2035,7 +2022,7 @@ PrefabInstance:
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 195310686}
+      objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -2334,8 +2321,8 @@ MonoBehaviour:
 
     I hate this place, I''m going away.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e1744b6b471f7ae47853a9a6da86c464, type: 2}
+  m_sharedMaterial: {fileID: 3246066500276469099, guid: e1744b6b471f7ae47853a9a6da86c464, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2546,7 +2533,7 @@ PrefabInstance:
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 195310686}
+      objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
