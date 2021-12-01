@@ -1,12 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour {
     public float spawnRadius;
-    public float maxBugs;
-    public float bugCount;
     public List<GameObject> bugsPrefabs;
+    public int absoluteMaxBugs;
+    public int minBugs;
+    public int spawnIncrement;
+
+    [HideInInspector]
+    public int maxBugs;
+
+    [HideInInspector]
+    public int bugCount;
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.yellow;
@@ -16,6 +25,10 @@ public class Spawner : MonoBehaviour {
     }
 
     void Update() {
+        int incrementCount = (GameManager.Score/200) + 1;
+        int newMax = minBugs + incrementCount * spawnIncrement;
+        maxBugs = (newMax <= absoluteMaxBugs) ? newMax : absoluteMaxBugs;
+        
         if (bugCount < maxBugs) {
             Vector2 spawnPosition = Random.insideUnitCircle.normalized * (spawnRadius * 2);
             GameObject randomEnemy = bugsPrefabs[Random.Range(0, bugsPrefabs.Count)];

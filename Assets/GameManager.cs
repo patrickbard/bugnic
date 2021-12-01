@@ -56,9 +56,8 @@ public class GameManager : MonoBehaviour
             //     missedText.SetActive(true);
             // }
 
-            if (missedBugs > 30 && _spawner.bugCount > 10) {
+            if (missedBugs > 30) {
                 gameOverReason = score > 300 ? GameOverReason.TOO_MANY_ESCAPED : GameOverReason.INACTIVITY;
-
                 LevelLoader.LoadNextScene();
             }
         }

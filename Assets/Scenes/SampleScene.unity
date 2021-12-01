@@ -153,14 +153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 5
-  maxBugs: 20
-  bugCount: 0
   bugsPrefabs:
   - {fileID: 2777774236977395722, guid: 83e105d9d5e6fbf4e9ede86366f1275a, type: 3}
   - {fileID: 4329873106757613780, guid: 7a0afdeab87cf754393cc8fa45b48228, type: 3}
   - {fileID: 436405469313146053, guid: dfeed24a336bd9e40a000b9628254bfd, type: 3}
   - {fileID: 8599998088064458387, guid: 98adf16bcb638e74d98a4e7db2106f52, type: 3}
   - {fileID: 8695458410582491519, guid: bc1261fc5ea265b4d8f8daf757924cc0, type: 3}
+  absoluteMaxBugs: 30
+  minBugs: 5
+  spawnIncrement: 3
+  maxBugs: 0
+  bugCount: 0
 --- !u!4 &33728032
 Transform:
   m_ObjectHideFlags: 0
