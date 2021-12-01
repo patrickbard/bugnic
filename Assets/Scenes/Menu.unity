@@ -714,7 +714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -84}
+  m_AnchoredPosition: {x: -5, y: -80}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314481226
@@ -744,7 +744,11 @@ MonoBehaviour:
 
 
     Please take into account there is a small delay between clicking
-    and hitting, you can use it in your advantage.'
+    and hitting, and you can use it in your advantage.
+
+
+    Avoid missing too many
+    bugs.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b3c12e5e78f663439a61388458993c4, type: 2}
   m_sharedMaterial: {fileID: 1385924135761020675, guid: 3b3c12e5e78f663439a61388458993c4, type: 2}
@@ -771,7 +775,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.95
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -807,7 +811,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.22659, y: 27.287003, z: 86.11975, w: 395.01303}
+  m_margin: {x: 102.55426, y: 80.352005, z: 86.11975, w: 395.01303}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1613,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121956, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -512
+      value: -670
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2216,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121956, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -512
+      value: -670
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2344,7 +2348,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 800, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3155,7 +3159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121956, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -512
+      value: -670
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3213,7 +3217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121956, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -512
+      value: -670
       objectReference: {fileID: 0}
     - target: {fileID: 6521948935500121957, guid: 3d9ad4f82f703ee43b98a662ba548d25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

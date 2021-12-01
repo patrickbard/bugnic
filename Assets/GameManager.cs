@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static int Score => score;
     public static int MissedBugs => missedBugs;
     public static GameOverReason gameOverReason;
+    public static bool isPaused;
     
     private static GameManager instance;
     private static int score = 0;
@@ -20,10 +21,11 @@ public class GameManager : MonoBehaviour
     private static int missedBugs = 0;
     private static bool shouldDislayMissed;
     private static Spawner _spawner;
-    
+    private static GameObject _pauseGameObjet;
 
     public Spawner spawner;
     public GameObject missedText;
+    public GameObject pauseGameObjet;
 
     private void Awake() {
         if (instance == null || instance == this) {
@@ -42,8 +44,10 @@ public class GameManager : MonoBehaviour
     void init() {
         score = 0;
         missedBugs = 0;
+        isPaused = false;
         Time.timeScale = 1;
         _spawner = spawner;
+        _pauseGameObjet = pauseGameObjet;
     }
 
     private void Update() {
@@ -56,11 +60,30 @@ public class GameManager : MonoBehaviour
             //     missedText.SetActive(true);
             // }
 
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space)) {
+                if (isPaused) {
+                    ResumeGame();
+                } else {
+                    PauseGame();
+                }
+            }
+
             if (missedBugs > 30) {
-                gameOverReason = score > 300 ? GameOverReason.TOO_MANY_ESCAPED : GameOverReason.INACTIVITY;
-                LevelLoader.LoadNextScene();
+                EndGame();
             }
         }
+    }
+
+    public static void PauseGame() {
+        isPaused = true;
+        Time.timeScale = 0;
+        _pauseGameObjet.SetActive(true);
+    }
+    
+    public static void ResumeGame() {
+        isPaused = false;
+        Time.timeScale = 1;
+        _pauseGameObjet.SetActive(false);
     }
 
     public static void RestartGame() {
@@ -69,6 +92,11 @@ public class GameManager : MonoBehaviour
     
     public static void GoBackToMainMenu() {
         LevelLoader.GoBackToMainMenu();
+    }
+    
+    public static void EndGame() {
+        gameOverReason = score > 300 ? GameOverReason.TOO_MANY_ESCAPED : GameOverReason.INACTIVITY;
+        LevelLoader.LoadNextScene();
     }
 
     public static void addScore() {

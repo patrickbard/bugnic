@@ -21,23 +21,25 @@ public class FlySwatter : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // var position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        if (!GameManager.isPaused) {
+            var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // var position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         
-        transform.position = Vector2.Lerp(transform.position, position, 0.5f);
-        var transformPosition = transform.position;
-        // transform.Translate( position * (10 * Time.deltaTime));
+            transform.position = Vector2.Lerp(transform.position, position, 0.5f);
+            var transformPosition = transform.position;
+            // transform.Translate( position * (10 * Time.deltaTime));
         
-        if (transformPosition.x < -5.5f) {
-            transform.position = Vector2.Lerp(new Vector2(-5.5f, transformPosition.y), position, 0.5f);
-        }
+            if (transformPosition.x < -5.5f) {
+                transform.position = Vector2.Lerp(new Vector2(-5.5f, transformPosition.y), position, 0.5f);
+            }
         
-        if (transformPosition.y > 5.5f) {
-            transform.position = Vector2.Lerp(new Vector2(transformPosition.x, 5.5f), position, 0.5f);
-        }
+            if (transformPosition.y > 5.5f) {
+                transform.position = Vector2.Lerp(new Vector2(transformPosition.x, 5.5f), position, 0.5f);
+            }
         
-        if (canHit && Input.GetMouseButtonDown(0)) {
-            animator.SetTrigger("hit");
+            if (canHit && Input.GetMouseButtonDown(0)) {
+                animator.SetTrigger("hit");
+            }
         }
     }
 

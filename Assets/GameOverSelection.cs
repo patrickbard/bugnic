@@ -8,6 +8,8 @@ public class GameOverSelection : MonoBehaviour {
     public GameObject gameOverByInactivity;
 
     private void Awake() {
+        Time.timeScale = 1f;
+        
         switch (GameManager.gameOverReason) {
             case GameOverReason.INACTIVITY:
                 gameOverMain.SetActive(false);
