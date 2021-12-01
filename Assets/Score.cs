@@ -12,6 +12,7 @@ public enum ScoreType {
 public class Score : MonoBehaviour {
     public ScoreType type;
     private TextMeshProUGUI textMeshPro;
+    private bool shouldDislay;
 
     private void Awake() {
         textMeshPro = GetComponent<TextMeshProUGUI>();

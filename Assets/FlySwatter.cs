@@ -58,21 +58,24 @@ public class FlySwatter : MonoBehaviour {
     }
     
     private void testFunction() {
-        // Debug.Log("[TEST_FUNCTION]");
         if (potentialTargets.Count > 0) {
 
             GameObject killingText = null;
+            int extraPoints = 0;
 
             if (potentialTargets.Count == 2) {
                 killingText = Instantiate(doubleKillObj, gameObject.transform.position, Quaternion.identity);
+                extraPoints = 20;
             }
 
             if (potentialTargets.Count == 3) {
                 killingText = Instantiate(tripleKillObj, gameObject.transform.position, Quaternion.identity);
+                extraPoints = 50;
             }
 
             if (potentialTargets.Count > 3) {
                 killingText = Instantiate(juicyKillObj, gameObject.transform.position, Quaternion.identity);
+                extraPoints = 100;
             }
 
             StartCoroutine(DestroyKillingText(killingText));
@@ -83,7 +86,8 @@ public class FlySwatter : MonoBehaviour {
                 potentialTargets.Remove(target);
                 target.GetComponent<Bug>().Die();
             }
-            
+
+            GameManager.addScore(extraPoints);
             AudioManager.PlayRandomBugDeathSound();
         }
     }
