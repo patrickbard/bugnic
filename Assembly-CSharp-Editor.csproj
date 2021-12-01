@@ -699,6 +699,9 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Sysroot.Linux_x86_64">
+     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
@@ -765,6 +768,9 @@
      <Reference Include="Unity.2D.PixelPerfect.Editor">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
@@ -785,12 +791,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Sysroot.Linux_x86_64">
-     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
-     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
      </Reference>
      <Reference Include="Unity.SysrootPackage.Editor">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>

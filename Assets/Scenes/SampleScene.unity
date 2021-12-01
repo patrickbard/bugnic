@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 5
-  maxBugs: 8
+  maxBugs: 20
   bugCount: 0
   bugsPrefabs:
   - {fileID: 2777774236977395722, guid: 83e105d9d5e6fbf4e9ede86366f1275a, type: 3}
@@ -207,6 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85c4c75c0ac7bf48815cb93d1a884df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleKillObj: {fileID: 5203611670468015025, guid: 2342d77f42886674e9e9ab5bb36856c6, type: 3}
+  tripleKillObj: {fileID: 823856732184713825, guid: 3cbbebd1c00e89e4a835adc3aff45401, type: 3}
+  juicyKillObj: {fileID: 3493541236035699707, guid: 12448cfe63f66054db6d59dfe04de4ea, type: 3}
 --- !u!60 &340215974
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -551,7 +554,8 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -5641522970600081408, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
-  - name: 2
+  bugDeathSounds:
+  - name: 1
     clip: {fileID: 8300000, guid: 2fa911140f28b7745929065f38f9eb2c, type: 3}
     volume: 1
     volumeVariance: 1
@@ -560,7 +564,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -5641522970600081408, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
-  - name: 3
+  - name: 2
     clip: {fileID: 8300000, guid: a506f91bf16cc904686495c0ab64e46d, type: 3}
     volume: 1
     volumeVariance: 1
@@ -569,7 +573,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -5641522970600081408, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
-  - name: 4
+  - name: 3
     clip: {fileID: 8300000, guid: 591393d0d7aa78f4bb8bb9c2e456a18d, type: 3}
     volume: 1
     volumeVariance: 1
@@ -1185,6 +1189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85c4c75c0ac7bf48815cb93d1a884df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleKillObj: {fileID: 0}
+  tripleKillObj: {fileID: 0}
+  juicyKillObj: {fileID: 0}
 --- !u!1 &1662364321
 GameObject:
   m_ObjectHideFlags: 0

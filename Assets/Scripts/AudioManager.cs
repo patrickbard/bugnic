@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour {
     public static AudioManager instance;
     public static List<Sound> _soundtracks;
     public static List<Sound> _flySwatterSounds;
+    public static List<Sound> _bugDeathSounds;
     public static bool isApplicationPaused;
 
 
@@ -25,6 +26,7 @@ public class AudioManager : MonoBehaviour {
     public string startingSoundtrackName;
     public List<Sound> soundtracks;
     public List<Sound> flySwatterSounds;
+    public List<Sound> bugDeathSounds;
 
     void Awake() {
         if (instance != null) {
@@ -35,9 +37,11 @@ public class AudioManager : MonoBehaviour {
             
             _soundtracks = soundtracks;
             _flySwatterSounds = flySwatterSounds;
+            _bugDeathSounds = bugDeathSounds;
 
             InitializeSoundList(_soundtracks);
             InitializeSoundList(_flySwatterSounds);
+            InitializeSoundList(_bugDeathSounds);
 
             PlaySoundtrackByName(startingSoundtrackName);
             // PlayRandomSoundtrack();
@@ -115,6 +119,10 @@ public class AudioManager : MonoBehaviour {
     
     public static void PlayRandomFlySwatterSound() {
         PlayRandomSoundFromList(_flySwatterSounds);
+    }
+    
+    public static void PlayRandomBugDeathSound() {
+        PlayRandomSoundFromList(_bugDeathSounds);
     }
 
     public static void PlayRandomSoundFromList(List<Sound> sounds) {

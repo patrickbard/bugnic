@@ -10,6 +10,10 @@ public class FlySwatter : MonoBehaviour {
     private HashSet<GameObject> potentialTargets;
     private bool canHit = true;
 
+    public GameObject doubleKillObj;
+    public GameObject tripleKillObj;
+    public GameObject juicyKillObj;
+
     private void Awake() {
         animator = GetComponent<Animator>();
         potentialTargets = new HashSet<GameObject>();
@@ -55,10 +59,39 @@ public class FlySwatter : MonoBehaviour {
     
     private void testFunction() {
         // Debug.Log("[TEST_FUNCTION]");
-        foreach (var target in potentialTargets.ToList()) {
-            Debug.Log(target.name);
-            potentialTargets.Remove(target);
-            target.GetComponent<Bug>().Die();
+        if (potentialTargets.Count > 0) {
+
+            GameObject killingText = null;
+
+            if (potentialTargets.Count == 2) {
+                killingText = Instantiate(doubleKillObj, gameObject.transform.position, Quaternion.identity);
+            }
+
+            if (potentialTargets.Count == 3) {
+                killingText = Instantiate(tripleKillObj, gameObject.transform.position, Quaternion.identity);
+            }
+
+            if (potentialTargets.Count > 3) {
+                killingText = Instantiate(juicyKillObj, gameObject.transform.position, Quaternion.identity);
+            }
+
+            StartCoroutine(DestroyKillingText(killingText));
+            
+
+            foreach (var target in potentialTargets.ToList()) {
+                Debug.Log(target.name);
+                potentialTargets.Remove(target);
+                target.GetComponent<Bug>().Die();
+            }
+            
+            AudioManager.PlayRandomBugDeathSound();
+        }
+    }
+
+    private IEnumerator DestroyKillingText(GameObject killingText) {
+        if (killingText != null) {
+            yield return new WaitForSeconds(1f);
+            Destroy(killingText);
         }
     }
 }
