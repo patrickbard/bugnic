@@ -27,4 +27,8 @@ public class LevelLoader : MonoBehaviour
     public static void LoadNextScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public static AsyncOperation LoadSceneAsync() {
+        return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }

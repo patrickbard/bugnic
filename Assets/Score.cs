@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum ScoreType {
     SCORE,
@@ -21,10 +22,16 @@ public class Score : MonoBehaviour {
     void Update() {
         switch (type) {
             case ScoreType.SCORE:
-                textMeshPro.text = GameManager.Score.ToString();
+                string baseText = "Score: ";
+
+                if (SceneManager.GetActiveScene().buildIndex == 2) {
+                    baseText = "";
+                }
+
+                textMeshPro.text = baseText + GameManager.Score;
                 break;
             case ScoreType.MISS:
-                textMeshPro.text = GameManager.MissedBugs.ToString();
+                textMeshPro.text = "Missed: " + GameManager.MissedBugs;
                 break;
         }
     }

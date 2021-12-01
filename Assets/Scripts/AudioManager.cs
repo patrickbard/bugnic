@@ -1,24 +1,19 @@
-using UnityEngine.Audio;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Playables;
-using Random = UnityEngine.Random;
-
-public enum FootstepSurface {
-    CONCRETE,
-    DIRT,
-    GRASS,
-    GRAVEL,
-    WOOD
-}
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
     public static AudioManager instance;
+
     public static List<Sound> _soundtracks;
+    
     public static List<Sound> _flySwatterSounds;
     public static List<Sound> _bugDeathSounds;
+    
+    public static List<Sound> _beginningSounds;
+    public static List<Sound> _gameOverSounds;
+    public static List<Sound> _winningSounds;
     public static bool isApplicationPaused;
 
 
@@ -27,6 +22,10 @@ public class AudioManager : MonoBehaviour {
     public List<Sound> soundtracks;
     public List<Sound> flySwatterSounds;
     public List<Sound> bugDeathSounds;
+    
+    public List<Sound> beginningSounds;
+    public List<Sound> gameOverSounds;
+    public List<Sound> winningSounds;
 
     void Awake() {
         if (instance != null) {
@@ -36,15 +35,24 @@ public class AudioManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             
             _soundtracks = soundtracks;
+
             _flySwatterSounds = flySwatterSounds;
             _bugDeathSounds = bugDeathSounds;
+            
+            _beginningSounds = beginningSounds;
+            _gameOverSounds = gameOverSounds;
+            _winningSounds = winningSounds;
 
             InitializeSoundList(_soundtracks);
             InitializeSoundList(_flySwatterSounds);
             InitializeSoundList(_bugDeathSounds);
+            InitializeSoundList(_beginningSounds);
+            InitializeSoundList(_gameOverSounds);
+            InitializeSoundList(_winningSounds);
 
-            PlaySoundtrackByName(startingSoundtrackName);
+            // PlaySoundtrackByName(startingSoundtrackName);
             // PlayRandomSoundtrack();
+            PlayRandomBeginningSong();
         }
     }
 
@@ -66,15 +74,35 @@ public class AudioManager : MonoBehaviour {
         isApplicationPaused = true;
     }
 
-    // private void Update() {
-    //     if (!isApplicationPaused) {
-    //         bool isPlaying = soundtracks.Any(sound => sound.source.isPlaying);
-    //
-    //         if (!isPlaying) {
-    //             PlayRandomSoundtrack();
-    //         }
-    //     }
-    // }
+    private void Update() {
+        if (!isApplicationPaused) {
+            bool isPlayingBeginningSong = beginningSounds.Any(sound => sound.source.isPlaying);
+            bool isPlayingSoundtrack = soundtracks.Any(sound => sound.source.isPlaying);
+            bool isPlayingGameOverSong = gameOverSounds.Any(sound => sound.source.isPlaying);
+
+            
+            switch (SceneManager.GetActiveScene().buildIndex) {
+                case 0:
+                    if (!isPlayingBeginningSong) {
+                        StopPlayingAll();
+                        PlayRandomBeginningSong();
+                    }
+                    break;
+                case 1:
+                    if (!isPlayingSoundtrack) {
+                        StopPlayingAll();
+                        PlayRandomSoundtrack();
+                    }
+                    break;
+                case 2:
+                    if (!isPlayingGameOverSong) {
+                        StopPlayingAll();
+                        PlayRandomGameOverSong();
+                    }
+                    break;
+            }
+        }
+    }
 
     public static void PlaySoundtrackByName(string soundName) {
         foreach (Sound soundtrack in _soundtracks) {
@@ -125,16 +153,43 @@ public class AudioManager : MonoBehaviour {
         PlayRandomSoundFromList(_bugDeathSounds);
     }
 
-    public static void PlayRandomSoundFromList(List<Sound> sounds) {
-        if (sounds != null && sounds.Count > 0) {
-            foreach (Sound sound in sounds) {
-                sound.source.Stop();
-            }
-        
-            if (sounds.Count > 0) {
-                var sound = sounds[Random.Range(0, sounds.Count)];
-                Play(sound);
-            }
+    public static void PlayRandomBeginningSong() {
+        PlayRandomSoundFromList(_beginningSounds);
+    }
+    public static void PlayRandomGameOverSong() {
+        PlayRandomSoundFromList(_gameOverSounds);
+    }
+    public static void PlayRandomWinningSound() {
+        PlayRandomSoundFromList(_winningSounds);
+    }
+
+    public static void StopPlayingList(List<Sound> sounds) {
+        if (sounds == null || sounds.Count <= 0) {
+            return;
         }
+
+        foreach (Sound sound in sounds) {
+            sound.source.Stop();
+        }
+    }
+    
+    public static void StopPlayingAll() {
+        StopPlayingList(_soundtracks);
+        StopPlayingList(_flySwatterSounds);
+        StopPlayingList(_bugDeathSounds);
+        StopPlayingList(_beginningSounds);
+        StopPlayingList(_gameOverSounds);
+        StopPlayingList(_winningSounds);
+    }
+
+    public static void PlayRandomSoundFromList(List<Sound> sounds) {
+        if (sounds == null || sounds.Count <= 0) {
+            return;
+        }
+
+        StopPlayingList(sounds);
+
+        var sound = sounds[Random.Range(0, sounds.Count)];
+        Play(sound);
     }
 }

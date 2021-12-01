@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        AsyncOperation loadSceneAsync = LevelLoader.LoadSceneAsync();
         while (!loadSceneAsync.isDone) {
             yield return null;
         }

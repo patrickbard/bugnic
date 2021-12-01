@@ -311,6 +311,12 @@
      <Reference Include="unityplastic">
      <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
      </Reference>
+     <Reference Include="websocket-sharp">
+     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Assets/Plugins/StreamDeck/Editor/websocket-sharp.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityStreamDeck">
+     <HintPath>E:/Code/Unity/GameJams/GameOff 2021/bug/Assets/Plugins/StreamDeck/Editor/UnityStreamDeck.dll</HintPath>
+     </Reference>
      <Reference Include="netstandard">
      <HintPath>F:/ProgramFilesNVMe/x64/Unity/2021.1.24f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
      </Reference>

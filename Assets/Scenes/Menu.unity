@@ -322,7 +322,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: apple thief
@@ -331,7 +331,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: movin with it
@@ -340,7 +340,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: up in trouble
@@ -349,7 +349,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: white rabbit
@@ -358,7 +358,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: fluffing a duck
@@ -367,7 +367,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   - name: back to work
@@ -376,7 +376,7 @@ MonoBehaviour:
     volumeVariance: 1
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
   flySwatterSounds:
@@ -416,6 +416,36 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: -5641522970600081408, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
+    source: {fileID: 0}
+  beginningSounds:
+  - name: 1
+    clip: {fileID: 8300000, guid: 4515c6e4c16e54f4cb8bbe094a0afc5f, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
+    source: {fileID: 0}
+  gameOverSounds:
+  - name: 1
+    clip: {fileID: 8300000, guid: 64273269b1ff78840ba9ac0d00ddb304, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
+    source: {fileID: 0}
+  winningSounds:
+  - name: 1
+    clip: {fileID: 8300000, guid: b1d4dbd9dabc3f34c9c1a3acb47505b0, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 4851912310380279064, guid: d13f1c8e5b91a244daa689fefc4b95bf, type: 2}
     source: {fileID: 0}
 --- !u!4 &16835555
 Transform:
